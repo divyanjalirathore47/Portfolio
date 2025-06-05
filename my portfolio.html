@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      animation: fadeIn 1s ease-in;
+    }
+
+    header {
+      background: lightblue;
+      color: #fff;
+      padding: 20px;
+      animation: slideDown 0.8s ease-in-out;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    nav ul li {
+      margin-right: 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+
+    section {
+      padding: 20px;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    .project-cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #f4f4f4;
+      padding: 20px;
+      flex: 1 1 calc(33% - 40px);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      text-align: center;
+      transition: transform 0.3s, background-color 0.3s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      background-color: #ffeecf;
+    }
+
+    footer {
+      background: lightblue;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    /* Media Query */
+    @media (max-width: 768px) {
+      .card {
+        flex: 1 1 100%;
+      }
+
+      nav ul {
+        flex-direction: column;
+      }
+
+      nav ul li {
+        margin-bottom: 10px;
+      }
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome!</h2>
+    <p>Hi, I'm a 2nd year student pursuing a bachelor in computer applications(BCA).</p>
+    <p>I'm passionate about web development and technologies.</p>
+    <p></p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I enjoy coding and creating small web projects. I'm currently learning HTML, CSS, and JavaScript.</p>
+    <p>I'm a curious and passionate learner. I enjoy solving problems and building things.</p>
+    <p>I believe in continuous learning and keep exploring new technologies.</p>
+  </section>
+
+  <section id="projects">
+  <h2>My Projects</h2>
+  <div class="project-cards">
+    <div class="card">
+      <img src="jute.jpeg" alt="The Jute Studio Screenshot" style="width:100%; border-radius:5px; margin-bottom: 10px;">
+      <h3>The Jute Studio</h3>
+      <p>A stylish e-commerce website for selling eco-friendly jute products.</p>
+      <a href="https://github.com/yourusername/the-jute-studio" target="_blank">View Code</a> |
+      <a href="https://yourusername.github.io/the-jute-studio" target="_blank">Live Demo</a>
+    </div>
+  </div>
+</section>
+
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Email: divyanjalirathore47@gmail.com</p>
+  </section>
+
+  <footer>
+    <p>© 2025 My Portfolio</p>
+  </footer>
+</body>
+</html>
